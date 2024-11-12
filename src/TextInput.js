@@ -8,7 +8,7 @@ function TextInput() {
         e.preventDefault();
 
         try {
-            const response = await axios.post('http://localhost:5000/save-text', { text });
+            const response = await axios.post('https://serverside-h6rs.onrender.com/save-text', { text });
             alert(response.data.message);
         } catch (error) {
             console.error("There was an error saving the text!", error);
